@@ -19,13 +19,13 @@ sanfran <- sanfran %>%
 ggplot(data = shapes) +
   geom_sf() +
   geom_sf(data = sanfran, aes(alpha = 0.4)) +
-  theme(legend.position = "none") +
+  guides(alpha = FALSE) +
   theme_map() +
   coord_sf(xlim = c(-122.55, -122.3), ylim = c(37.7, 37.85)) +
   transition_time(hour) +
   labs(title = "Shootings in San Francisco by the Hour Starting from Midnight {frame_time}",
-       subtitle = "Data from January 2013 through June 2015 shows increase in shootings at _",
+       subtitle = "Data from January 2013 through June 2015 shows increase in shootings at nighttime",
        caption = "Source: Justice Tech Lab") 
-  anim_save(sanfran_anim, animation = last_animation())
+  anim_save("Shotspotter/sanfran_anim.gif", animation = last_animation())
 
   

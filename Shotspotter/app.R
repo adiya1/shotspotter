@@ -24,18 +24,16 @@ ui <- fluidPage(
                 
                 mainPanel(
                 
-                  h2("Animated Map", style = "font-family: 'times'", align = "center"),)
+                  h2("Animated Map", style = "font-family: 'times'", align = "center"),
+                  imageOutput("anim"))
   ))
 
 
-# Define server logic required to draw a histogram
 server <- function(input, output) {
     
     # Create scatterplot object the plotOutput function is expecting
-    output$scatterplot <- renderPlot({
-      ggplot(data = movies, aes_string(x = input$x, y = input$y)) +
-        geom_point(alpha = 1)
-    })
+    output$anim <- renderImage(list(src = "sanfran_anim.gif"), 
+                               deleteFile = FALSE)
   }
 
 # Run the application 
