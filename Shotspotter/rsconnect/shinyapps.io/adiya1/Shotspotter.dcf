@@ -5,8 +5,8 @@ account: adiya1
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 875563
-bundleId: 2031232
+bundleId: 2031526
 url: https://adiya1.shinyapps.io/Shotspotter/
-when: 1555983054.6437
+when: 1555991638.6077
 asMultiple: FALSE
 asStatic: FALSE
